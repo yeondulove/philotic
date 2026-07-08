@@ -3,13 +3,15 @@ export default function Submit() {
     <section id="submit" className="scroll-mt-16 bg-forest">
       <div className="mx-auto max-w-3xl px-5 py-20 text-center sm:px-8 sm:py-28">
         <h2 className="font-serif text-3xl font-bold leading-snug tracking-tight text-paper sm:text-4xl">
-          당신의 원고가
-          <br className="sm:hidden" /> 다음 한 권이 됩니다
+          당신이 만든 책을,
+          <br />
+          우리가 베스트셀러로 만듭니다
         </h2>
-        <p className="mx-auto mt-6 max-w-md leading-loose text-tint">
-          인문·심리·자기계발 분야의 원고 투고를 기다립니다. 기획안 또는 원고
-          일부와 간단한 저자 소개를 보내주시면, 검토 후 영업일 기준 2주 이내에
-          회신드립니다.
+        <p className="mx-auto mt-6 max-w-lg leading-loose text-tint">
+          인문·심리·자기계발 분야의 원고 투고를 기다립니다. 다른 곳은 책을 내고
+          시장의 반응을 기다리지만, 필로틱은 책을 내는 순간 수십만 명에게 쏘는
+          마케팅이 가동됩니다. 당신이 공들인 책이 출간 첫 주에 베스트셀러 매대에
+          오르는 경험을 함께 만듭니다.
         </p>
 
         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">

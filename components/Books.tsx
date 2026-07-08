@@ -27,21 +27,26 @@ const BOOKS: Book[] = [
     title: "무한의 부",
     cover: "/books/muhan.jpg",
     desc: "부의 크기를 결정하는 것은 통장 잔고가 아니라 생각의 그릇이다. 돈을 담아낼 그릇부터 키우는, 자본주의 시대의 부의 태도.",
+    badge: "베스트셀러",
   },
   {
     title: "라이프코드",
     cover: "/books/lifecode.jpg",
     desc: "왜 어떤 사람은 늘 원하는 것을 얻는가. 사람과 관계, 선택의 이면에서 작동하는 인간 본성의 코드를 해독한다.",
+    badge: "베스트셀러",
   },
   {
     title: "강풍에도 쓰러지지 않는다",
+    author: "모옌",
     cover: "/books/gangpung.jpg",
-    desc: "무너지지 않는 사람에게는 단단한 마음의 구조가 있다. 흔들리는 시대에 나를 지탱하는 회복탄력성의 원리.",
+    desc: "노벨문학상 수상작가 모옌의 작품. 무너지지 않는 사람에게는 단단한 마음의 구조가 있다. 흔들리는 시대에 나를 지탱하는 힘.",
+    badge: "노벨문학상 수상작가",
   },
   {
     title: "어제보다 멍청해지기 전에",
     cover: "/books/eoje.jpg",
     desc: "생각하지 않을수록 뇌는 빠르게 무뎌진다. 매일 조금씩 더 선명하게 사고하는 사람으로 남기 위한 지적 습관.",
+    badge: "베스트셀러",
   },
   {
     title: "게으른 그들은 어떻게 1조원을 벌었을까",
@@ -67,6 +72,10 @@ export default function Books() {
             전체 {BOOKS.length}종
           </span>
         </div>
+        <p className="mt-4 max-w-2xl leading-relaxed text-ink-soft">
+          신생 출판사가 2년간, 내는 책마다 종합 베스트셀러 매대에 올렸습니다.
+          운이 아니라 시스템으로 증명합니다.
+        </p>
 
         <div className="mt-12 grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
           {BOOKS.map((book) => (

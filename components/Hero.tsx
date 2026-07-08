@@ -13,17 +13,18 @@ export default function Hero() {
         <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.85fr]">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.25em] text-forest">
-              Book Publishing · Seoul
+              Bestseller Publishing · Seoul
             </p>
-            <h1 className="mt-6 font-serif text-4xl font-black leading-[1.3] tracking-tight text-ink sm:text-5xl lg:text-[3.4rem]">
-              고전의 깊이를,
+            <h1 className="mt-6 font-serif text-4xl font-black leading-[1.28] tracking-tight text-ink sm:text-5xl lg:text-[3.3rem]">
+              좋은 책을 만들고,
               <br />
-              오늘의 언어로.
+              베스트셀러로 만듭니다.
             </h1>
             <p className="mt-7 max-w-md text-base leading-loose text-ink-soft sm:text-lg">
-              필로틱은 인문·심리·자기계발의 경계에서 책을 만듭니다. 한 번 읽고
-              버려지는 책이 아니라, 책장에서 다시 꺼내게 되는 책. 오래 곁에 두고
-              여러 번 펼치게 되는 책을 짓습니다.
+              필로틱은 60만 부 베스트셀러 『역행자』의 저자 자청이 세운 출판
+              브랜드입니다. 신생 출판사가 2년간, 내는 책마다 종합 베스트셀러에
+              올렸습니다. 좋은 책을 만드는 일을 넘어 알리는 일까지 — 만들면
+              띄웁니다.
             </p>
             <div className="mt-9 flex flex-wrap items-center gap-x-7 gap-y-3">
               <a
