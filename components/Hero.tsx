@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const FEATURED = [
   { title: "완벽한 원시인", cover: "/books/wonsiin.jpg" },
-  { title: "역행자", cover: "/books/yeokhaengja.jpg" },
+  { title: "무한의 부", cover: "/books/muhan.jpg" },
   { title: "프로이트의 감정수업", cover: "/books/freud.jpg" },
 ];
 
