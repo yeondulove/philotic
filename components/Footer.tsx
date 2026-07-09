@@ -13,13 +13,13 @@ export default function Footer() {
           </p>
         </div>
         <nav className="flex gap-6">
-          <a href="#books" className="transition hover:text-forest">
+          <a href="/#books" className="transition hover:text-forest">
             도서
           </a>
-          <a href="#about" className="transition hover:text-forest">
+          <a href="/#about" className="transition hover:text-forest">
             출판사 소개
           </a>
-          <a href="#submit" className="transition hover:text-forest">
+          <a href="/#submit" className="transition hover:text-forest">
             원고 투고
           </a>
         </nav>

@@ -15,6 +15,7 @@ const notoSerifKr = Noto_Serif_KR({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.philotic.co.kr"),
   title: "필로틱 PHILOTIC | 좋은 책을 베스트셀러로 만드는 출판사",
   description:
     "필로틱은 『역행자』의 저자 자청이 세운 출판 브랜드입니다. 완벽한 원시인, 프로이트의 감정수업 등 내는 책마다 베스트셀러에 올린, ‘만들면 띄우는’ 출판사입니다.",

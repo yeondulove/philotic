@@ -3,24 +3,30 @@
 import { useState } from "react";
 
 const LINKS = [
-  { href: "#books", label: "도서" },
-  { href: "#about", label: "출판사 소개" },
-  { href: "#submit", label: "원고 투고" },
+  { href: "/#books", label: "도서" },
+  { href: "/#about", label: "출판사 소개" },
+  { href: "/#submit", label: "원고 투고" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
+  // 홈에서는 부드러운 스크롤로 이동. 다른 페이지(도서 상세 등)에서는
+  // 브라우저 기본 이동으로 홈의 해당 섹션까지 정상 이동합니다.
   function handleNav(e: React.MouseEvent<HTMLAnchorElement>, href: string) {
     setOpen(false);
-    if (!href.startsWith("#")) return;
-    const el = document.querySelector(href);
+    const hashIndex = href.indexOf("#");
+    if (hashIndex === -1) return;
+    const hash = href.slice(hashIndex);
+    const onHomePage = window.location.pathname === "/";
+    if (!onHomePage) return; // 기본 이동(/#books 등)에 맡김
+    const el = document.querySelector(hash);
     if (!el) return;
     e.preventDefault();
     window.setTimeout(() => {
       const y = el.getBoundingClientRect().top + window.scrollY - 64;
       window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
-      history.replaceState(null, "", href);
+      history.replaceState(null, "", hash);
     }, 0);
   }
 
@@ -28,8 +34,8 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
-          href="#top"
-          onClick={(e) => handleNav(e, "#top")}
+          href="/"
+          onClick={(e) => handleNav(e, "/#top")}
           className="font-serif text-xl font-black tracking-tight text-forest"
         >
           필로틱 <span className="text-ink-soft/70">PHILOTIC</span>
@@ -47,8 +53,8 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#submit"
-            onClick={(e) => handleNav(e, "#submit")}
+            href="/#submit"
+            onClick={(e) => handleNav(e, "/#submit")}
             className="rounded-full bg-forest px-5 py-2 text-sm font-bold text-paper transition hover:bg-forest-deep"
           >
             투고하기
@@ -91,8 +97,8 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="#submit"
-            onClick={(e) => handleNav(e, "#submit")}
+            href="/#submit"
+            onClick={(e) => handleNav(e, "/#submit")}
             className="mt-3 block rounded-full bg-forest px-5 py-3 text-center text-base font-bold text-paper"
           >
             투고하기
