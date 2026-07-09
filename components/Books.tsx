@@ -4,6 +4,7 @@ type Book = {
   title: string;
   cover: string;
   author?: string;
+  translator?: string;
   desc: string;
   badge?: string;
 };
@@ -53,6 +54,13 @@ const BOOKS: Book[] = [
     cover: "/books/geeoreun.jpg",
     desc: "성실하게 오래 일한다고 부자가 되지는 않는다. 적게 일하고 크게 버는 사람들이 공유하는, 노동이 아닌 구조의 사고법.",
   },
+  {
+    title: "사형당했지만 이 편지는 주고 싶습니다",
+    author: "루키우스 안나이우스 세네카",
+    translator: "박정민",
+    cover: "/books/seneca.jpg",
+    desc: "황제에게 사형을 선고받은 철학자가 죽음 앞에서 남긴 마지막 통찰. 2천 년을 살아남은 스토아 철학자 세네카의 행복론을, 오늘의 언어로 새롭게 옮겼다.",
+  },
 ];
 
 export default function Books() {
@@ -98,7 +106,10 @@ export default function Books() {
                 {book.title}
               </h3>
               {book.author && (
-                <p className="mt-0.5 text-sm text-ink-soft">{book.author} 지음</p>
+                <p className="mt-0.5 text-sm text-ink-soft">
+                  {book.author} 지음
+                  {book.translator ? ` · ${book.translator} 옮김` : ""}
+                </p>
               )}
               <p className="mt-2 text-sm leading-relaxed text-ink-soft">
                 {book.desc}
